@@ -1,0 +1,163 @@
+#include <iostream>
+using namespace std;
+
+void square(){
+  int a ,c;
+  cout<<"choose from below"<<endl;
+  cout<<"choose 1 for perimeter\n ";
+  cout<<"choose 2 for area"<<endl;
+  cout<<"coose 3 to break"<<endl;
+  cout<<"enter your choice  : "<<endl;
+  
+  cin>>c;
+  switch(c){
+    case 1:
+    cout<<"enter side :";
+    cin>>a;
+    cout<<"perimeter of sqaure : "<<4*a;
+    break;
+    
+    case 2:
+    cout<<"enter side :";
+    cin>>a;
+    cout<<"area of sqaure : "<<a*a;
+    break;
+    
+    default:
+    break;
+  }
+}
+
+
+void rectangle(){
+  int a ,b,c;
+  cout<<"choose from below"<<endl;
+  cout<<"choose 1 for perimeter\n ";
+  cout<<"choose 2 for area"<<endl;
+  cout<<"coose 3 to break"<<endl;
+  cout<<"enter your choice  : ";
+  
+  cin>>c;
+  switch(c){
+    case 1:
+    cout<<"enter length :";
+    cin>>a;
+    cout<<"enter breadth :";
+    cin>>b;
+   cout<<"perimeter of rectangle : "<<2*(a+b);
+    break;
+    
+    case 2:
+     cout<<"enter length : ";
+    cin>>a;
+    cout<<"enter breadth : ";
+    cin>>b;
+    cout<<"area of rectangle : "<<a*b;
+    break;
+    
+    default:
+    break;
+  }
+}
+
+
+void triangle(){
+  int c;
+  cout<<"choose from below"<<endl;
+  cout<<"choose 1 for perimeter\n ";
+  cout<<"choose 2 for area"<<endl;
+  cout<<"coose 3 to break"<<endl;
+  cout<<"enter your choice  : ";
+  cin>>c;
+  switch(c){
+    case 1:
+    int a,b,r;
+    cout<<"enter side1 :";
+    cin>>a;
+    cout<<"enter side 2 :";
+    cin>>b;
+    cout<<"enter side 3:";
+    cin>>r;
+   cout<<"perimeter of triangle : "<<a+b+r;
+    break;
+    
+    case 2:
+    int l,m;
+     cout<<"enter base : ";
+    cin>>l;
+    cout<<"enter height : ";
+    cin>>m;
+    cout<<"area of triangle : "<<0.5*l*m;
+    break;
+    
+    default:
+    break;
+  }
+}
+
+void circle(){
+  int r ,c;
+  cout<<"choose from below"<<endl;
+  cout<<"choose 1 for perimeter\n ";
+  cout<<"choose 2 for area"<<endl;
+  cout<<"coose 3 to break"<<endl;
+  cout<<"enter your choice  : "<<endl;
+  cin>>c;
+  switch(c){
+    case 1:
+    cout<<"enter radius :";
+    cin>>r;
+    cout<<"perimeter of circle : "<<2*3.14*r;
+    break;
+    
+    case 2:
+    cout<<"enter radius :";
+    cin>>r;
+    cout<<"area of circle : "<<3.14*r*r;
+    break;
+    
+    default:
+    break;
+  }
+}
+void menu(int h){
+  char g;
+  do{
+    cout<<"ENTER YOUR CHOICE"<<endl<<"SQUARE(1)"<<endl
+      <<"rectangle(2)"<<endl<<"triangle(3)"<<endl<<"circle(4)"<<endl;
+
+    int i;
+cout<<"choose any number :  ";
+    cin>>i;
+    cout<<endl<<endl;
+    switch(i)
+      {
+        //case (1):
+        case 1: 
+        square();
+        break;
+        case 2:
+        rectangle();
+        break;
+        case 3:
+        triangle();
+        break;
+        case 4:
+        circle();
+        
+        break;
+        default:
+        cout<<"what a drag !!!"<<endl;
+        break;
+        } 
+      
+    cout<<endl<<"do you want to contiune : ";
+    cin>>g;
+  }while(g!='n'&& g!='N');
+}
+
+
+int main() {
+  int n;
+  menu(n);
+  }
